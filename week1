@@ -56,7 +56,7 @@ int main()
         else if (b > a[mid])
         {low = mid + 1;}
         else                  
-        {c = mid - 1;}
+        {c = mid;}
     }
     if(a[mid]!=b)
     {printf("not found");}
