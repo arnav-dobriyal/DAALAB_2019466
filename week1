@@ -1,0 +1,64 @@
+//linear search
+#include <stdio.h>
+int main()
+{
+    int b,c;
+    int a[100];
+    int i=0,j=0;
+    printf("enter no. of input");
+    scanf("%d",&c);
+    for(int j=0;j<=c-1;j++)
+    {
+        scanf("%d",&a[j]);
+    }
+    printf("enter value to be found");
+    scanf("%d",&b);
+    for(i=0;i<=c-1;i++)
+    {
+        if(b==a[i])
+        {
+            printf("it is at position %d",i);
+            break;
+        }
+        
+    }
+    if(a[i]!=b)
+        {
+            printf("not found");
+        }
+return 0;
+}
+
+//binary search
+//Always in sorted array
+#include <stdio.h>
+
+int main()
+{
+    int b,c;
+    int a[100];
+    int i=0,j=0;
+    int mid,low=0;
+    printf("enter no. of input");
+    scanf("%d",&c);
+    for(int j=0;j<=c-1;j++)
+    {
+        scanf("%d",&a[j]);
+    }
+    printf("enter value to be found");
+    scanf("%d",&b);
+    while(low != c)
+    {
+        mid = (low + c)/2;
+        if (b == a[mid])
+        {printf("position is %d",mid);
+        break;}
+        else if (b > a[mid])
+        {low = mid + 1;}
+        else                  
+        {c = mid - 1;}
+    }
+    if(a[mid]!=b)
+    {printf("not found");}
+return 0;
+}
